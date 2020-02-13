@@ -8,13 +8,14 @@ body {
 }
 
 .site {
+  background-color: #DDDDDD;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr 3fr 1fr;
   grid-template-columns: 1fr 3fr 3fr 1fr;
-      grid-template-areas: "margin-r header header margin-l"
-                       "margin-r col-1 col-2 margin-l"
-                       "margin-r footer footer margin-l";
+  grid-template-areas: "margin-r header header margin-l"
+                    "margin-r col-1 col-1 margin-l"
+                    "margin-r col-2 col-3 margin-l"
+                    "margin-r footer footer margin-l";
 }
 
 @media screen and (max-width: 1024px) {
@@ -26,35 +27,39 @@ body {
         grid-template-areas: "header"
                              "col-1"
                              "col-2"
+                             "col-3"
                              "footer";
   }
 }
 
 .header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
   grid-area: header;
   position: relative;
+  background-color: white;
 }
 
 .content-col-1 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: col-1;
+  padding: 0 1rem 0 1rem;
+  background-color: white;
 }
 
 .content-col-2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
   grid-area: col-2;
+  padding: 0 1rem 0 1rem;
+  background-color: white;
+}
+
+.content-col-3 {
+  grid-area: col-3;
+  padding: 0 1rem 0 1rem;
+  background-color: white;
 }
 
 .footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
   grid-area: footer;
+  background-color: white;
+  padding-bottom: 2rem;
 }
 
 .picture {
@@ -70,8 +75,13 @@ body {
   background-position: -5px 0;
 }
 
+.bg-code {
+  background-image: url("/assets/images/code.jpg");
+  background-size: 50%;
+}
+
 .icon-container {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
 }
