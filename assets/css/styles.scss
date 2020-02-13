@@ -5,6 +5,11 @@ body {
   margin: 0;
 }
 
+.bg-header {
+  height: 120px; 
+  margin-bottom: 50px;
+}
+
 .mycv.bg-primary {
   background-color: #325D88 !important;
 }
@@ -18,14 +23,49 @@ body {
                     "margin-r footer footer margin-l";
 }
 
+.print-header {
+  display: none;
+}
+
+.picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 5px solid white;
+  position: absolute;
+  top: 60px;
+  left: calc(50% - 50px);
+  background-image: url("/assets/images/photo-2.JPG");
+  background-size: 100px;
+  background-position: -5px 0;
+}
+
 @media print {
+  .picture {
+    left: 2cm;
+    top: 2cm;
+    border-radius: 0;
+    width: 4cm;
+    height: 4cm;
+    background-size: 4cm;
+  }
+
+  .screen-header {
+    display: none;
+  }
+
+  .print-header {
+    display: block;
+    padding: 2cm 0 0 6.5cm;
+  }
+
+  .bg-header {
+    display: none;
+  }
+
   .site {
     display: grid;
     grid-template-columns: 0 3fr 3fr 0;
-    grid-template-areas: "margin-r header header margin-l"
-                      "margin-r col-1 col-1 margin-l"
-                      "margin-r col-2 col-3 margin-l"
-                      "margin-r footer footer margin-l";
   }
 
   .content-col-1 {
@@ -38,14 +78,6 @@ body {
   
   .content-col-3 {
     margin: 2cm 2cm 0 2cm;
-  }
-
-  .col-3 {
-    width: 15%;
-  }
-
-  .col-9 {
-    width: 85%;
   }
 }
 
@@ -90,19 +122,6 @@ body {
   grid-area: footer;
   background-color: white;
   padding-bottom: 2rem;
-}
-
-.picture {
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  border: 5px solid white;
-  position: absolute;
-  top: 60px;
-  left: calc(50% - 50px);
-  background-image: url("/assets/images/photo-2.JPG");
-  background-size: 100px;
-  background-position: -5px 0;
 }
 
 .bg-code {
