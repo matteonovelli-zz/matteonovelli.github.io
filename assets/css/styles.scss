@@ -17,6 +17,19 @@ body {
                        "margin-r footer footer margin-l";
 }
 
+@media screen and (max-width: 1024px) {
+  .site {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+        grid-template-areas: "header"
+                             "col-1"
+                             "col-2"
+                             "footer";
+  }
+}
+
 .header {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
