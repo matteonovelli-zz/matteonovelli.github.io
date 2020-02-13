@@ -1,15 +1,15 @@
 ---
 ---
 
-@import "scss/bootstrap";
-
 body {
   margin: 0;
 }
 
+.mycv.bg-primary {
+  background-color: #325D88 !important;
+}
+
 .site {
-  background-color: #DDDDDD;
-  display: -ms-grid;
   display: grid;
   grid-template-columns: 1fr 3fr 3fr 1fr;
   grid-template-areas: "margin-r header header margin-l"
@@ -18,9 +18,39 @@ body {
                     "margin-r footer footer margin-l";
 }
 
+@media print {
+  .site {
+    display: grid;
+    grid-template-columns: 0 3fr 3fr 0;
+    grid-template-areas: "margin-r header header margin-l"
+                      "margin-r col-1 col-1 margin-l"
+                      "margin-r col-2 col-3 margin-l"
+                      "margin-r footer footer margin-l";
+  }
+
+  .content-col-1 {
+    margin: 0 2cm 0 2cm;
+  }
+  
+  .content-col-2 {
+    margin: 2cm 2cm 0 2cm;
+  }
+  
+  .content-col-3 {
+    margin: 2cm 2cm 0 2cm;
+  }
+
+  .col-3 {
+    width: 15%;
+  }
+
+  .col-9 {
+    width: 85%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .site {
-    display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
