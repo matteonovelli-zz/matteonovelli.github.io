@@ -10,8 +10,8 @@ body {
 .site {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 9cm 9cm 1fr;
-  grid-template-columns: 1fr 9cm 9cm 1fr;
+  -ms-grid-columns: 1fr 3fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr 3fr 1fr;
       grid-template-areas: "margin-r header header margin-l"
                        "margin-r col-1 col-2 margin-l"
                        "margin-r footer footer margin-l";
@@ -22,6 +22,7 @@ body {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: header;
+  position: relative;
 }
 
 .content-col-1 {
@@ -41,4 +42,15 @@ body {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: footer;
+}
+
+.picture {
+  width: 100px;
+  height: 100px;
+  background-image: url("/assets/images/photo-2.JPG");
+  border-radius: 100px;
+  border: 5px solid white;
+  position: absolute;
+  top: 60px;
+  left: calc(50% - 50px);
 }
