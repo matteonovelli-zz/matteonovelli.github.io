@@ -42,11 +42,6 @@ body {
 }
 
 @media print {
-  .mycv.bg-primary {
-    background-color: transparent !important; 
-  }
-
-  
   .picture {
     left: 2cm;
     top: 2cm;
@@ -72,6 +67,7 @@ body {
   .site {
     display: grid;
     grid-template-columns: 0 3fr 3fr 0;
+    background-color: transparent; 
   }
 
   .content-col-1 {
