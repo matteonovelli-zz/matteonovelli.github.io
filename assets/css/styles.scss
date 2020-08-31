@@ -42,6 +42,11 @@ body {
 }
 
 @media print {
+  .mycv.bg-primary {
+    background-color: transparent !important; 
+  }
+
+  
   .picture {
     left: 2cm;
     top: 2cm;
